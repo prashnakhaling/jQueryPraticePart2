@@ -1,0 +1,38 @@
+table,
+td,
+th {
+    border: 1px solid rgb(8, 8, 8);
+    border-collapse: collapse;
+
+}
+
+/* forzebrastripes using jQuery */
+.zebra {
+    background-color: lavender;
+}
+
+p span {
+    text-decoration: underline;
+}
+
+.aboutp {
+    color:rgb(128, 0, 128);
+    font-family:sans-serif;
+    text-align: center;
+}
+h2{
+    color:rgb(16, 16, 248);
+    text-align: center;
+}
+/* css for button */
+.remove{
+ margin :auto;
+ display:flex;
+ justify-content: center;
+}
+#testid{
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}

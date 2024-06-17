@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> How to make a blinking text using jQuery ?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+
+        function blink() {
+            $(".blinktext").fadeOut(500); //This line selects elements with the class blink and fades them out over 500 milliseconds (0.5 seconds).
+            $(".blinktext").fadeIn(500);
+
+
+        }
+        setInterval(blink, 1000);
+
+
+    </script>
+</head>
+
+<body>
+    <p class="blinktext">how to make a blinking text using jQuery?</p>
+    <p>hello <span class=" blinktext">world</span></p>
+</body>
+
+</html>

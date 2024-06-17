@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if an object is a jQuery object.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //set a value in span using jQuery
+            $('#button1').click(function () {
+                $("#spanid").html(" Exercises Solution");
+            });
+
+            //to find the class of the clicked element
+            $("li").click(function () {
+                var colorClass = this.className;
+                console.log(colorClass);
+            });
+
+            //set href attribute at runtime using jQuery
+            $('#visitbtn').click(function () {
+                $(".link").attr('href', 'https://www.youtube.com/');
+
+            });
+            //remove disabled attribute using jQuery
+            $("#checkbtn").click(function () {
+                $('.textbox').prop("disabled", false);
+            });
+
+            // find total width of an element 
+
+            console.log("Width + padding + borders : " + $("#checkbtn").outerWidth());
+        });
+    </script>
+</head>
+
+<body>
+    <!-- set a value in span using jQuery -->
+    <p>jQuery<span id="spanid" style="color:red"> Exercises</span>.</p>
+    <input id="button1" type="button" value="Click to see the changes" />
+
+    <!-- find the class of the clicked element -->
+
+    <p>click to find the class</p>
+    <ul>
+        <li class="capital">kathmandu</li>
+        <li class="00999">lalitpur</li>
+        <li class="097778">bhaktapur</li>
+        <li class="p002">palpa</li>
+        <li class="342894">mustang</li>
+    </ul>
+
+    <!-- set href attricute at runtime using jQuery -->
+    <a href=""> Google.com</a>
+    <input type="button" id="visitbtn" value=" click to see the actual url"><br>
+
+    <!-- remove disabled attribute using jQuery -->
+    <input type="checkbox" class=" textbox" disabled> Science
+    <input type="checkbox" class=" textbox" disabled>Management<br>
+    <input type="button" id="checkbtn" value="click to enable the checkbox">
+
+    <!-- find the total width of an element  -->
+
+    <p id = "testid" >This is a test text</p>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make first word bold of all elements.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //make first word bold
+            $('p').each(function () {
+                var pdata = $(this);
+                pdata.html(pdata.text().replace(/(^\w+)/, '<strong>$1</strong>'));
+            });
+
+
+
+        });
+
+        //restrict number only input for textboxes including decimal points
+        $(document).ready(function () {
+            $(".number").keyup(function () {
+                this.value = this.value.replace(/[^0-9\.]/g, '');
+            });
+
+            //to find the loaded jQuery version
+            if (window.jQuery) {
+                console.log('jQuery version:', jQuery.fn.jquery);
+            } else {
+                console.log('jQuery is not loaded.');
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- make first word bold -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laborum fugit delectus amet optio modi. Eos alias
+        quisquam sequi nihil! Quae, soluta corrupti. Illo impedit, nobis error porro deleniti saepe.</p><br>
+    <p>This is a test text.</p>
+
+    <!-- restrict number only input for textboxes including decimal points -->
+    <p>Please enter the price </p>
+    <input type="text" value="" class="number">
+
+</body>
+
+</html>

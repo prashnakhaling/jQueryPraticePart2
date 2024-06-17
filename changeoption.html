@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change options of select using jQuery.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Change options of select using jQuery.
+            var option = $('<select></select>').attr("kathmandu", "khotang").text("khotang");
+            $("#opt4").empty().append(option);
+
+            //access HTML form data using jQuery
+            console.log($('form').serialize());
+
+            //adding attribute using jQuery
+            $(document).ready(function () {
+                $('#formbtn').click(function () {
+                    $('#test1').prop('value', 'input your course');
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Change options of select using jQuery. -->
+    <select name="" id="">
+        <option id="opt1" value="city">Kathmandu</option>
+        <option id="opt2" value="city">Lalitpur</option>
+        <option id="opt3" value="city">Bhaktapur</option>
+        <option id="opt4" value="city">Kavre</option>
+        <option id="opt5" value="city"> Pulchowk</option>
+    </select>
+
+    <!-- Access HTML form data using jQuery. -->
+    <form >
+        <label for="name"> Name</label>
+        <input type="text" name="name" id="test" autocomplete="Prashna">
+
+        <label for="course">Course</label>
+        <input type="text" name="course" id="test1" autocomplete="BCA">
+        <input type="button" id="formbtn" value="click to add attribute">
+    </form>
+
+
+
+
+</body>
+
+</html>

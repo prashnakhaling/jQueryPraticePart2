@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underline all the words of a text using jQuery.</title>
+    <link rel="stylesheet" href="jquerystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('p').each(function () {
+
+                var text_words = $(this).text().split(' ');
+
+                $(this).empty().html(function () {
+
+                    for (i = 0; i < text_words.length; i++) {
+                        if (i === 0) {
+                            $(this).append('<span>' + text_words[i] + '</span>');
+                        } else {
+                            $(this).append(' <span>' + text_words[i] + '</span>');
+                        }
+                    }
+
+                });
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, perferendis illum rerum consectetur ea et
+        assumenda ex dolore, sunt non praesentium nemo ab minima error distinctio quo ut alias sint!</p>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to detect a textbox's content has changed using jQuery?</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //set background imge using jQuery CSS property
+            $('body').css('background-image',
+                'url("needabreak-1024x459.png")');
+
+            //jQuery to know if the content of the textbox has been changed
+            $("#name").on("change", function () {
+                alert('text content changed!');
+            });
+
+            //Remove a specific value from an array using jQuery.
+
+
+            var y = ['Red', 'Green', 'White', 'black', 'Yellow'];
+            var remove_Item = 'White';
+
+            console.log('Array before removing the element = ' + y);
+            y = $.grep(y, function (value) {
+                return value != remove_Item;
+            });
+            console.log('Array after removing the element = ' + y);
+
+            //jQuery to change the button text
+            $("input").click(function () {
+                $("#primarybtn").prop('value', 'save');
+            });
+
+            //jQuery to add option to a drop-down list
+            var addOptions = {
+                val1: 'BIT',
+                val2: 'MIT'
+            };
+            var mySelect = $('#course');
+            $.each(addOptions, function (val, text) {
+                mySelect.append(
+                    $('<option></option>').val(val).html(text)
+                );
+            });
+
+            //How to get the selected value and currently selected text of a dropdown box using jQuery?
+
+            $('#course').change(function () {
+                // Get the selected value
+                var selectedValue = $('#course').val();
+                console.log("Selected value: " + selectedValue);
+
+                // Get the selected text
+                var selectedText = $('#course option:selected').text();
+                console.log("Selected text: " + selectedText);
+            });
+
+            //disable a link using jQuery
+            $("#googlebtn").click(function () {
+                $("a").removeAttr('href');
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- to know if the content of the textbox has been changed or not -->
+    <input type="text" id="name"><br>
+
+    <!-- change button text using jQuery -->
+    <input type="button" value="click" id="primarybtn">
+
+
+    <!-- Add options to a drop-down list using jQuery. -->
+    <p>List of subject</p>
+    <select name="course" id="course">
+        <option value="bca">BCA</option>
+        <option value="bba">BAA</option>
+        <option value="bbs">BBS</option>
+        <option value="mca">MCA</option>
+        <option value="mba">MBA</option>
+    </select><br>
+
+    <!-- disable a link using jQuery -->
+    <a href="https://www.google.com/">Google.com</a><br>
+    <input type="button" id="googlebtn" value="Click to remove link of Google">
+
+</body>
+
+</html>

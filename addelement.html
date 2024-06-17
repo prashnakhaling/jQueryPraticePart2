@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a list elements within an unordered list element</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        
+            function add_newelement() {
+                $("#subject ul").append('<li>Digital Logic</li>');
+            }
+        
+    </script>
+</head>
+
+<body>
+    <h3>This is a test.</h3>
+    <div id="subject">
+        
+        <ul>
+            <li>Data Structure and Algorithm</li>
+            <li>Scripting Language</li>
+            <li>Numerical Methods</li>
+            <li>Software Engineering</li>
+        </ul>
+    </div>
+    <input type="button" value=" Add New Subject" onclick="add_newelement()" />
+
+</body>
+
+</html>

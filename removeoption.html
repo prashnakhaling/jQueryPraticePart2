@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select values from a json object using jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        function removeoption() {
+            $("#faculty")
+                .empty()
+                .append('<option selected="selected" value="test">Information Technology</option>');
+        }
+        $(document).ready(function () {
+            var count = $("#countcountry p").length
+            console.log(count);
+        });
+    </script>
+</head>
+
+<body>
+    <h3>select values from a JSON object using jQuery</h3>
+
+    <select name="faculty" id="faculty">
+        <option value="BCA">BCA</option>
+        <option value="BIT">BIT</option>
+        <option value="BSC">BSC</option>
+        <option value="BBA">BBA</option>
+    </select>
+    <input type="button" value="click to remove all options" onclick="removeoption()" />
+    <!-- count child elements using jQuery -->
+    <div id="countcountry">
+        <p>Nepal</p>
+        <p>Bangadesh</p>
+        <p>Bhutan</p>
+        <p>India</p>
+        <p>China</p>
+        <p>Boudha</p>
+    </div>
+</body>
+
+</html>
